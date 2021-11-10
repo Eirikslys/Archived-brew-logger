@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brewing.name %>
+</p>
+
+<p>
+  <strong>Brewers:</strong>
+  <%= @brewing.brewers %>
+</p>
+
+<p>
+  <strong>Batch number:</strong>
+  <%= @brewing.batch_number %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @brewing.strength %>
+</p>
+
+<p>
+  <strong>Original gravity:</strong>
+  <%= @brewing.original_gravity %>
+</p>
+
+<p>
+  <strong>Final gravity:</strong>
+  <%= @brewing.final_gravity %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @brewing.notes %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @brewing.date %>
+</p>
+
+<%= link_to 'Edit', edit_brewing_path(@brewing) %> |
+<%= link_to 'Back', brewings_path %>
