@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Brewings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brewers</th>
+      <th>Batch number</th>
+      <th>Strength</th>
+      <th>Original gravity</th>
+      <th>Final gravity</th>
+      <th>Notes</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brewings.each do |brewing| %>
+      <tr>
+        <td><%= brewing.name %></td>
+        <td><%= brewing.brewers %></td>
+        <td><%= brewing.batch_number %></td>
+        <td><%= brewing.strength %></td>
+        <td><%= brewing.original_gravity %></td>
+        <td><%= brewing.final_gravity %></td>
+        <td><%= brewing.notes %></td>
+        <td><%= brewing.date %></td>
+        <td><%= link_to 'Show', brewing %></td>
+        <td><%= link_to 'Edit', edit_brewing_path(brewing) %></td>
+        <td><%= link_to 'Destroy', brewing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Brewing', new_brewing_path %>
